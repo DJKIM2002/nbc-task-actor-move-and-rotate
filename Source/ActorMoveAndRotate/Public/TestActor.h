@@ -33,10 +33,16 @@ class ACTORMOVEANDROTATE_API ATestActor : public AActor {
   void LogCurrentRotation();
   // Execute a random step of movement and rotation
   void ExecuteRandomStep();
+  // Event Trigger (message log)
+  void TriggerEvent();
 
  private:
   // Timer handle for scheduling movements and rotations
   FTimerHandle TimerHandle;
   // Counter to track the number of movements and rotations
-  int32 Counter = 0;
+  int32 Count = 0;
+  // Total number of events triggered
+  int32 EventCount = 0;
+  // Total distance moved by the actor
+  float TotalDistance = 0.f;
 };
