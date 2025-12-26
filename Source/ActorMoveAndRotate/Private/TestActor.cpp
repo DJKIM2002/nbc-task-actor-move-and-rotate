@@ -37,11 +37,11 @@ void ATestActor::Tick(float DeltaTime) { Super::Tick(DeltaTime); }
 void ATestActor::Turn() {
   // X, Y, Z에 랜덤한 회전 각도 생성
   float RandomRotatePitch =
-      FMath::RandRange(START_RANDOM_ROTATION_RANGE, END_RANDOM_ROTATION_RANGE);
+      FMath::FRandRange(START_RANDOM_ROTATION_RANGE, END_RANDOM_ROTATION_RANGE);
   float RandomRotateYaw =
-      FMath::RandRange(START_RANDOM_ROTATION_RANGE, END_RANDOM_ROTATION_RANGE);
+      FMath::FRandRange(START_RANDOM_ROTATION_RANGE, END_RANDOM_ROTATION_RANGE);
   float RandomRotateRoll =
-      FMath::RandRange(START_RANDOM_ROTATION_RANGE, END_RANDOM_ROTATION_RANGE);
+      FMath::FRandRange(START_RANDOM_ROTATION_RANGE, END_RANDOM_ROTATION_RANGE);
   FRotator NewRotation(RandomRotatePitch, RandomRotateYaw, RandomRotateRoll);
   SetActorRotation(NewRotation);
 }
@@ -53,11 +53,11 @@ void ATestActor::Move() {
 
   // X, Y, Z에 랜덤한 위치 생성
   float RandomMoveX =
-      FMath::RandRange(START_RANDOM_MOVEMENT_RANGE, END_RANDOM_MOVEMENT_RANGE);
+      FMath::FRandRange(START_RANDOM_MOVEMENT_RANGE, END_RANDOM_MOVEMENT_RANGE);
   float RandomMoveY =
-      FMath::RandRange(START_RANDOM_MOVEMENT_RANGE, END_RANDOM_MOVEMENT_RANGE);
+      FMath::FRandRange(START_RANDOM_MOVEMENT_RANGE, END_RANDOM_MOVEMENT_RANGE);
   float RandomMoveZ =
-      FMath::RandRange(START_RANDOM_MOVEMENT_RANGE, END_RANDOM_MOVEMENT_RANGE);
+      FMath::FRandRange(START_RANDOM_MOVEMENT_RANGE, END_RANDOM_MOVEMENT_RANGE);
   FVector NewLocation(RandomMoveX, RandomMoveY, RandomMoveZ);
   SetActorLocation(NewLocation);
 
